@@ -29,7 +29,7 @@ public class MainRunnable implements MockerApplication {
         return true;
     };
 
-    private final Runnable runnableSplash = splashFrame::init;
+    private final Runnable runnableSplash = this.splashFrame::init;
 
     {
         callables.add(mainCallable);
@@ -37,13 +37,13 @@ public class MainRunnable implements MockerApplication {
 
     @Override
     public void run() {
-        this.executorService.submit(runnableSplash);
+        this.executorService.execute(runnableSplash);
         try {
             boolean taskResult = true;
             List<Future<Boolean>> tasks = this.executorService.invokeAll(callables);
             for (Future<Boolean> result: tasks)
                 if (!result.get()) taskResult = false;
-            if (taskResult) this.splashFrame.setVisible(false);
+            if (taskResult) this.splashFrame.dispose();
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
         }

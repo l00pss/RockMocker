@@ -15,10 +15,9 @@ public abstract class GFrame extends JFrame implements Initializer, Loadable {
     public GFrame(String frameName){
         this.setName(frameName);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setSize(1200,700);
         this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(Color.DARK_GRAY);
-        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
+
     }
 
 }

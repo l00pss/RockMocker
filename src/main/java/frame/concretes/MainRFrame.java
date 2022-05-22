@@ -25,6 +25,7 @@ public class MainRFrame extends AbstractRFrame  {
 
     @Override
     public void postConstr() {
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         try {
             UIManager.setLookAndFeel (flatLightLaf);
             this.setIconImage(ImageIO.read(new File("src/main/java/component/icon/M.png")));

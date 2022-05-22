@@ -1,10 +1,10 @@
 package frame.abstracts;
 
 import component.frame.GFrame;
+import component.window.GWindow;
 
-public abstract class AbstractBasicFrame extends GFrame {
-    public AbstractBasicFrame(String frameName) {
-        super(frameName);
+public abstract class AbstractRWindow extends GWindow {
+    public AbstractRWindow() {
     }
 
     @Override

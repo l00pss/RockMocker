@@ -12,6 +12,6 @@ public class FrameFactory extends AbstractFrameFactory {
 
     @Override
     public SplashFrame factorySplash() {
-        return new SplashFrame("Yüklənir...");
+        return new SplashFrame();
     }
 }
