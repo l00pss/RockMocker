@@ -1,5 +1,6 @@
 package core.concretes;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import core.abstracts.MockerApplication;
 import frame.concretes.MainRFrame;
 import frame.concretes.SplashFrame;
@@ -31,8 +32,6 @@ public class MainRunnable implements MockerApplication {
     };
 
     private final Runnable runnableSplash = this.splashFrame::init;
-
-
 
     {
         callables.add(mainCallable);

@@ -1,6 +1,9 @@
 package utility.view;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
 import com.formdev.flatlaf.FlatIntelliJLaf;
+import com.formdev.flatlaf.intellijthemes.FlatCarbonIJTheme;
+import com.formdev.flatlaf.intellijthemes.FlatDarkFlatIJTheme;
 import com.formdev.flatlaf.util.SystemInfo;
 import utility.Initializer;
 
@@ -10,7 +13,7 @@ import java.awt.*;
 public class ViewProvider implements Initializer {
     @Override
     public void init() {
-        FlatIntelliJLaf.install();
+        FlatIntelliJLaf.setup();
 
         UIManager.put( "Button.arc", 0 );
         UIManager.put( "Component.arc", 0 );
@@ -18,8 +21,6 @@ public class ViewProvider implements Initializer {
         UIManager.put( "ProgressBar.arc", 0 );
 
         UIManager.put( "TextComponent.arc", 5 );
-
-
 
         UIManager.put( "Button.arc", 999 );
         UIManager.put( "Component.arc", 999 );
@@ -32,7 +33,7 @@ public class ViewProvider implements Initializer {
 
         UIManager.put( "ScrollBar.width", 16 );
 
-        UIManager.put( "TabbedPane.showTabSeparators", true );
+        UIManager.put( "TabbedPane.showTabSeparators",true);
 
         UIManager.put( "TabbedPane.tabSeparatorsFullHeight", true );
 
@@ -42,6 +43,12 @@ public class ViewProvider implements Initializer {
 
         if (SystemInfo.isMacOS && System.getProperty("apple.laf.useScreenMenuBar") == null)
             System.setProperty("apple.laf.useScreenMenuBar", "true");
+
+        try {
+            UIManager.setLookAndFeel(new FlatDarculaLaf());
+        } catch (UnsupportedLookAndFeelException e) {
+            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application Icon exception");
+        }
 
         JDialog.setDefaultLookAndFeelDecorated(true);
         JFrame.setDefaultLookAndFeelDecorated(true);

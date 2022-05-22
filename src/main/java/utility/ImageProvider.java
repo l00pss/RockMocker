@@ -2,11 +2,11 @@ package utility;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 
 public class ImageProvider {
+
     public static Image getImage(String path){
         try {
             return ImageIO.read(new File(path));
@@ -26,4 +26,5 @@ public class ImageProvider {
         }
         return null;
     }
+
 }
