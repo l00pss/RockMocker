@@ -5,6 +5,7 @@ import component.window.GWindow;
 
 public abstract class AbstractRWindow extends GWindow {
     public AbstractRWindow() {
+
     }
 
     @Override

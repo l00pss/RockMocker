@@ -11,8 +11,7 @@ public class PicPanel extends JPanel {
     private BufferedImage image;
     private int w,h;
     public PicPanel(String fname){
-
-        //reads the image
+        this.setBackground(Color.black);
         try {
             image = ImageIO.read(new File(fname));
             w = image.getWidth();
