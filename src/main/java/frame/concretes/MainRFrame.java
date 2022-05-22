@@ -27,7 +27,7 @@ public class MainRFrame extends AbstractRFrame  {
     public void postConstr() {
         try {
             UIManager.setLookAndFeel (flatLightLaf);
-            this.setIconImage(ImageIO.read(new File("src/main/java/component/icon/5R.png")));
+            this.setIconImage(ImageIO.read(new File("src/main/java/component/icon/M.png")));
         } catch (IOException | UnsupportedLookAndFeelException e) {
             JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application Icon exception");
         }
