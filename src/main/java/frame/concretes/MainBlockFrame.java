@@ -3,6 +3,7 @@ package frame.concretes;
 import component.Loadable;
 import component.factory.abstracts.AbstractLayoutFactory;
 import component.factory.abstracts.FactoryManager;
+import utility.ImageProvider;
 import utility.Initializer;
 
 import javax.swing.*;
@@ -18,6 +19,9 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
     private final JTabbedPane jTabbedPane = new JTabbedPane();
 
     {
+        tabbedFrames.add(new TabbedFrame());
+        tabbedFrames.add(new TabbedFrame());
+        tabbedFrames.add(new TabbedFrame());
         tabbedFrames.add(new TabbedFrame());
         this.setLayout(layerFactory.factoryBorderLayout());
         this.jPanel.setBackground(Color.BLUE);
@@ -47,8 +51,11 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
     }
 
     private void initTabbedPanes(){
-        for (TabbedFrame tabbedFrames: tabbedFrames){
-            this.jTabbedPane.add(tabbedFrames.getNameOfTab(),tabbedFrames);
+        Image image = ImageProvider.getImage("src/main/java/component/icon/cancel_dark.png");
+        for (TabbedFrame tabbed: tabbedFrames) {
+
+            this.jTabbedPane.addTab(tabbed.getNameOfTab(), new ImageIcon(image),tabbed);
+            tabbed.init();
         }
     }
 

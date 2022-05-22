@@ -24,8 +24,8 @@ public class MainRFrame extends AbstractRFrame  {
     public MainRFrame(String frameName) {
         super(frameName);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        this.setLayout(layerFactory.factoryBorderLayout());
-        this.add(mainBlockFrame, BorderLayout.CENTER);
+        this.setLayout(new BorderLayout());
+        this.add(mainBlockFrame,BorderLayout.CENTER);
     }
 
 

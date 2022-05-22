@@ -10,6 +10,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.stream.Stream;
 
 public class NavigatorPanel extends JPanel implements Initializer, Loadable {
 
@@ -51,12 +52,32 @@ public class NavigatorPanel extends JPanel implements Initializer, Loadable {
         Image iconExecute = ImageIO.read(new File("src/main/java/component/icon/execute_dark.png"));
         Image iconCloseTab = ImageIO.read(new File("src/main/java/component/icon/cancel_dark.png"));
 
-        JButton newProject = componentFactory.factoryButton("New Tab");
-        newProject.setIcon(new ImageIcon(iconNewProject));
-        newProject.addActionListener((e)->{
+        JButton executeButton = componentFactory.factoryButton("Execute");
+        executeButton.setIcon(new ImageIcon(iconExecute));
+        executeButton.addActionListener((e)->{
 
         });
-        this.add(newProject);
+
+        JButton generateButton = componentFactory.factoryButton("Generate");
+        generateButton.setIcon(new ImageIcon(iconGenerate));
+        generateButton.addActionListener((e)->{
+
+        });
+
+        JButton reloadButton = componentFactory.factoryButton("Reload");
+        reloadButton.setIcon(new ImageIcon(iconReload));
+        reloadButton.addActionListener((e)->{
+
+        });
+
+        JButton refactorButton = componentFactory.factoryButton("Refactor");
+        refactorButton.setIcon(new ImageIcon(iconRefactor));
+        refactorButton.addActionListener((e)->{
+
+        });
+
+        Stream.of(executeButton,generateButton,refactorButton,refactorButton)
+                .forEach(this::add);
     }
 
 

@@ -12,13 +12,10 @@ public abstract class AbstractRFrame extends GFrame {
         super(frameName);
     }
     private final GMenuBar gMenuBar = new GMenuBar();
-    private final NavigatorPanel navigatorPanel = new NavigatorPanel();
     @Override
     public void init() {
         this.gMenuBar.init();
-        this.navigatorPanel.init();
         this.setJMenuBar(gMenuBar);
-        this.add(navigatorPanel, BorderLayout.NORTH);
         this.postConstr();
         this.preDestroy();
         this.setVisible(true);
