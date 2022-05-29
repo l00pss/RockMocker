@@ -19,13 +19,19 @@ public class MainRFrame extends AbstractRFrame  {
     private final FlatLaf flatLightLaf = ViewChanger.DARK.get();
     public final AbstractLayoutFactory layerFactory = (AbstractLayoutFactory) FactoryManager.LAYOUT.get();
 
+
+
+    private final RightRPanel rightRPanel = new RightRPanel();
     private final MainBlockFrame mainBlockFrame = new MainBlockFrame();
+    private final LeftRPanel leftRPanel = new LeftRPanel();
 
     public MainRFrame(String frameName) {
         super(frameName);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setLayout(new BorderLayout());
+        this.add(leftRPanel,BorderLayout.WEST);
         this.add(mainBlockFrame,BorderLayout.CENTER);
+        this.add(rightRPanel,BorderLayout.EAST);
     }
 
 
@@ -33,6 +39,7 @@ public class MainRFrame extends AbstractRFrame  {
     public void postConstr() {
         this.initUI();
         this.mainBlockFrame.init();
+        this.initRightPanel();
     }
 
     @Override
@@ -46,6 +53,12 @@ public class MainRFrame extends AbstractRFrame  {
         } catch (IOException  e) {
             JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application Icon exception");
         }
+    }
+
+
+    private void initRightPanel(){
+        this.leftRPanel.init();
+        this.rightRPanel.init();
     }
 
 }

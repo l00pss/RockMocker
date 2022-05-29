@@ -25,7 +25,7 @@ public class MainRunnable implements MockerApplication {
     private final MainRFrame mainRFrame = frameFactory.factory();
 
     private final Callable<Boolean> mainCallable = ()->{
-        Thread.sleep(5000);
+        Thread.sleep(3000);
         Stream.of(viewInitializer,mainRFrame)
                 .forEach(Initializer::init);
         return true;

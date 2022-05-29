@@ -14,7 +14,6 @@ import java.util.List;
 public class MainBlockFrame extends JPanel implements Initializer, Loadable {
     private final List<TabbedFrame> tabbedFrames = new ArrayList<>();
     public final AbstractLayoutFactory layerFactory = (AbstractLayoutFactory) FactoryManager.LAYOUT.get();
-    private final JPanel jPanel = new JPanel();
 
     private final JTabbedPane jTabbedPane = new JTabbedPane();
 
@@ -24,8 +23,6 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
         tabbedFrames.add(new TabbedFrame());
         tabbedFrames.add(new TabbedFrame());
         this.setLayout(layerFactory.factoryBorderLayout());
-        this.jPanel.setBackground(Color.BLUE);
-        this.add(this.jPanel,BorderLayout.CENTER);
     }
 
     @Override
@@ -35,11 +32,12 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
 
     @Override
     public void preDestroy() {
-        JPanel tabbedPanePanel = new JPanel();
-        tabbedPanePanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-        tabbedPanePanel.add(this.jTabbedPane);
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new GridLayout());
+        mainPanel.add(this.jTabbedPane);
 
-        this.add(tabbedPanePanel);
+
+        this.add(mainPanel);
         this.setVisible(true);
     }
 
@@ -53,10 +51,10 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
     private void initTabbedPanes(){
         Image image = ImageProvider.getImage("src/main/java/component/icon/cancel_dark.png");
         for (TabbedFrame tabbed: tabbedFrames) {
-
             this.jTabbedPane.addTab(tabbed.getNameOfTab(), new ImageIcon(image),tabbed);
             tabbed.init();
         }
+        this.jTabbedPane.setTabComponentAt(this.jTabbedPane.getTabCount()-1,new Button("+"));
     }
 
     private void addTabb(){
@@ -66,6 +64,7 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
     private void cancelTab(){
 
     }
+
 
 
 }
