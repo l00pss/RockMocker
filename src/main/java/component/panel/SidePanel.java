@@ -8,6 +8,6 @@ public class SidePanel extends JPanel {
         this.setBackground(Color.DARK_GRAY);
         this.setLayout(new GridLayout());
         this.setAutoscrolls(true);
-        this.setLayout(new GridLayout());
+        this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
     }
 }

@@ -39,7 +39,7 @@ public class MainRFrame extends AbstractRFrame  {
     public void postConstr() {
         this.initUI();
         this.mainBlockFrame.init();
-        this.initRightPanel();
+        this.initSidePanel();
     }
 
     @Override
@@ -56,7 +56,7 @@ public class MainRFrame extends AbstractRFrame  {
     }
 
 
-    private void initRightPanel(){
+    private void initSidePanel(){
         this.leftRPanel.init();
         this.rightRPanel.init();
     }
