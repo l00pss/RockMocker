@@ -23,6 +23,7 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
         tabbedFrames.add(new TabbedFrame(3));
         tabbedFrames.add(new TabbedFrame(4));
         this.setLayout(layerFactory.factoryBorderLayout());
+
     }
 
     @Override

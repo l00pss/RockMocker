@@ -1,6 +1,9 @@
 package core.concretes;
 
+import com.formdev.flatlaf.FlatDarculaLaf;
 import com.formdev.flatlaf.FlatLightLaf;
+import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
+import com.formdev.flatlaf.intellijthemes.FlatCarbonIJTheme;
 import core.abstracts.MockerApplication;
 import frame.concretes.MainRFrame;
 import frame.concretes.SplashFrame;
@@ -9,6 +12,7 @@ import frame.factory.concretes.FrameFactory;
 import utility.Initializer;
 import utility.view.ViewProvider;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.*;
@@ -25,7 +29,7 @@ public class MainRunnable implements MockerApplication {
     private final MainRFrame mainRFrame = frameFactory.factory();
 
     private final Callable<Boolean> mainCallable = ()->{
-        Thread.sleep(3000);
+        Thread.sleep(500);
         Stream.of(viewInitializer,mainRFrame)
                 .forEach(Initializer::init);
         return true;
@@ -39,6 +43,11 @@ public class MainRunnable implements MockerApplication {
 
     @Override
     public void run() {
+        try {
+            UIManager.setLookAndFeel(new FlatLightLaf());
+        } catch (UnsupportedLookAndFeelException e) {
+            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application Icon exception");
+        }
         this.executorService.execute(runnableSplash);
         try {
             boolean taskResult = true;

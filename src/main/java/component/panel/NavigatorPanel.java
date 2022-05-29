@@ -44,7 +44,7 @@ public class NavigatorPanel extends JPanel implements Initializer, Loadable {
         FlowLayout flowLayoutx = new FlowLayout(FlowLayout.LEFT,5,5);
         this.setLayout(flowLayoutx);
 
-        Image iconNewProject = ImageIO.read(new File("src/main/java/component/icon/annotate_dark.png"));
+        Image preferenceIcon = ImageIO.read(new File("src/main/java/component/icon/edit.png"));
         Image iconOpenP = ImageIO.read(new File("src/main/java/component/icon/install_dark.png"));
         Image iconReload = ImageIO.read(new File("src/main/java/component/icon/buildLoadChanges_dark.png"));
         Image iconGenerate = ImageIO.read(new File("src/main/java/component/icon/compile_dark.png"));
@@ -76,7 +76,13 @@ public class NavigatorPanel extends JPanel implements Initializer, Loadable {
 
         });
 
-        Stream.of(executeButton,generateButton,refactorButton,refactorButton)
+        JButton preferenceButton = componentFactory.factoryButton("Export");
+        preferenceButton.setIcon(new ImageIcon(preferenceIcon));
+        preferenceButton.addActionListener((e)->{
+
+        });
+
+        Stream.of(executeButton,generateButton,refactorButton,refactorButton,preferenceButton)
                 .forEach(this::add);
     }
 
