@@ -18,10 +18,10 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
     private final JTabbedPane jTabbedPane = new JTabbedPane();
 
     {
-        tabbedFrames.add(new TabbedFrame());
-        tabbedFrames.add(new TabbedFrame());
-        tabbedFrames.add(new TabbedFrame());
-        tabbedFrames.add(new TabbedFrame());
+        tabbedFrames.add(new TabbedFrame(1));
+        tabbedFrames.add(new TabbedFrame(2));
+        tabbedFrames.add(new TabbedFrame(3));
+        tabbedFrames.add(new TabbedFrame(4));
         this.setLayout(layerFactory.factoryBorderLayout());
     }
 

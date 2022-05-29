@@ -17,6 +17,7 @@ public class LeftRPanel extends SidePanel implements Initializer, Loadable {
     static SideButton framesSideButton = new SideButton("Frames");
     static SideButton schemesSideButton = new SideButton("Schemes");
 
+
     static {
         LeftRPanel.SIDE_BUTTONS.add(databaseSideButton);
         LeftRPanel.SIDE_BUTTONS.add(framesSideButton);

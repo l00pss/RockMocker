@@ -1,15 +1,23 @@
 package frame.concretes;
 
 import component.Loadable;
+import component.Stateful;
 import component.panel.NavigatorPanel;
 import utility.Initializer;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class TabbedFrame extends JPanel implements Initializer, Loadable {
+public class TabbedFrame extends JPanel implements Initializer, Loadable, Stateful {
 
-    private String nameOfTab = "New Tab";
+    private Integer index;
+
+    public TabbedFrame(Integer index){
+        super();
+        this.index= index;
+    }
+
+    private String nameOfTab = "New Tab ".concat(String.valueOf(this.index));
 
 
     private final NavigatorPanel navigatorPanel = new NavigatorPanel();
