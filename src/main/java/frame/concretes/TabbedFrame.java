@@ -13,11 +13,11 @@ public class TabbedFrame extends JPanel implements Initializer, Loadable, Statef
     private Integer index;
 
     public TabbedFrame(Integer index){
-        super();
+        this();
         this.index= index;
     }
 
-    private String nameOfTab = "New Tab ".concat(String.valueOf(this.index));
+    private String nameOfTab = "New Tab ";
 
 
     private final NavigatorPanel navigatorPanel = new NavigatorPanel();
@@ -48,7 +48,7 @@ public class TabbedFrame extends JPanel implements Initializer, Loadable, Statef
 
 
     public String getNameOfTab() {
-        return nameOfTab;
+        return nameOfTab.concat(String.valueOf(this.index));
     }
 
     public void setNameOfTab(String nameOfTab) {
