@@ -1,12 +1,10 @@
 package frame.concretes;
 
 import com.formdev.flatlaf.FlatLaf;
-import com.formdev.flatlaf.FlatLightLaf;
 import component.factory.abstracts.AbstractLayoutFactory;
 import component.factory.abstracts.FactoryManager;
-import component.other.GMenuBar;
 import frame.abstracts.AbstractRFrame;
-import utility.Initializer;
+import frame.concretes.leftPanel.LeftRPanel;
 import utility.view.ViewChanger;
 
 import javax.imageio.ImageIO;
