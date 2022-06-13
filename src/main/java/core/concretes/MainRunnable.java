@@ -28,8 +28,17 @@ public class MainRunnable implements MockerApplication {
     private final SplashFrame splashFrame = frameFactory.factorySplash();
     private final MainRFrame mainRFrame = frameFactory.factory();
 
+
+    static {
+        try {
+            UIManager.setLookAndFeel(new FlatDarculaLaf());
+        } catch (UnsupportedLookAndFeelException e) {
+            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application Icon exception");
+        }
+    }
+
     private final Callable<Boolean> mainCallable = ()->{
-        Thread.sleep(500);
+        Thread.sleep(3000);
         Stream.of(viewInitializer,mainRFrame)
                 .forEach(Initializer::init);
         return true;
@@ -41,13 +50,10 @@ public class MainRunnable implements MockerApplication {
         callables.add(mainCallable);
     }
 
+
     @Override
     public void run() {
-        try {
-            UIManager.setLookAndFeel(new FlatLightLaf());
-        } catch (UnsupportedLookAndFeelException e) {
-            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application Icon exception");
-        }
+
         this.executorService.execute(runnableSplash);
         try {
             boolean taskResult = true;
