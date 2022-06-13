@@ -45,7 +45,6 @@ public class MainRunnable implements MockerApplication {
     };
 
     private final Runnable runnableSplash = this.splashFrame::init;
-
     {
         callables.add(mainCallable);
     }
@@ -53,7 +52,6 @@ public class MainRunnable implements MockerApplication {
 
     @Override
     public void run() {
-
         this.executorService.execute(runnableSplash);
         try {
             boolean taskResult = true;
@@ -63,6 +61,7 @@ public class MainRunnable implements MockerApplication {
             if (taskResult) this.splashFrame.dispose();
         } catch (ExecutionException | InterruptedException e) {
             e.printStackTrace();
+            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application  Exception");
         }
     }
 }
