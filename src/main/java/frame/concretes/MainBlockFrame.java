@@ -23,7 +23,6 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
         tabbedFrames.add(new TabbedFrame(3));
         tabbedFrames.add(new TabbedFrame(4));
         this.setLayout(layerFactory.factoryBorderLayout());
-
     }
 
     @Override
@@ -36,8 +35,6 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new GridLayout());
         mainPanel.add(this.jTabbedPane);
-
-
         this.add(mainPanel);
         this.setVisible(true);
     }

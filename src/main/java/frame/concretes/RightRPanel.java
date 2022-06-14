@@ -26,11 +26,13 @@ public class RightRPanel extends SidePanel implements Initializer, Loadable {
         RightRPanel.SIDE_BUTTONS.add(databaseSideButton);
         RightRPanel.SIDE_BUTTONS.add(framesSideButton);
         RightRPanel.SIDE_BUTTONS.add(schemesSideButton);
+
     }
 
     {
-
+        this.setBorder(BorderFactory.createLineBorder(Color.gray));
     }
+
     @Override
     public void postConstr() {
 
