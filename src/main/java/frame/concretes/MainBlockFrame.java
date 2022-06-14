@@ -52,7 +52,7 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
             this.jTabbedPane.addTab(tabbed.getNameOfTab(), new ImageIcon(image),tabbed);
             tabbed.init();
         }
-        this.jTabbedPane.setTabComponentAt(this.jTabbedPane.getTabCount()-1,new Button("+"));
+        this.jTabbedPane.setTabComponentAt(this.jTabbedPane.getTabCount()-1,new JButton(new ImageIcon("src/main/java/component/icon/add_dark.png")));
     }
 
     private void addTabb(){

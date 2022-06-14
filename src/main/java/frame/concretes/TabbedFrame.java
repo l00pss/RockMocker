@@ -3,6 +3,7 @@ package frame.concretes;
 import component.Loadable;
 import component.Stateful;
 import component.panel.NavigatorPanel;
+import component.panel.TabbedPanel;
 import utility.Initializer;
 
 import javax.swing.*;
@@ -11,10 +12,13 @@ import java.awt.*;
 public class TabbedFrame extends JPanel implements Initializer, Loadable, Stateful {
 
     private Integer index;
+    private TabbedPanel tabbedPanel = new TabbedPanel();
+
 
     public TabbedFrame(){
         this.setLayout(new BorderLayout());
         this.add(navigatorPanel,BorderLayout.NORTH);
+        this.add(this.tabbedPanel,BorderLayout.CENTER);
     }
 
     public TabbedFrame(Integer index){
