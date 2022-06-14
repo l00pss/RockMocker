@@ -1,4 +1,4 @@
-package frame.concretes;
+package frame.concretes.center.frame;
 
 import component.Loadable;
 import component.Stateful;

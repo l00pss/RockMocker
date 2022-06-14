@@ -1,25 +1,24 @@
 package component.panel;
 
 import component.Loadable;
+import frame.concretes.center.frame.ButtonBlock;
+import frame.concretes.center.frame.ScriptBlock;
+import frame.concretes.center.frame.TableBlock;
 import utility.Initializer;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
-import java.awt.*;
-import java.util.stream.Stream;
 
 public class TabbedPanel extends JPanel implements Initializer, Loadable {
 
+    private final TableBlock tableBlock = new TableBlock();
+    private final ButtonBlock buttonBlock =  new ButtonBlock();
+    private final ScriptBlock scriptBlock = new ScriptBlock();
 
-    private String[] columnNames = { "ID", "Column Name", "Unique", "Nullable", "Updatable","Insertable","Type","Regex"};
-    private DefaultTableModel defaultTableModel = new DefaultTableModel();
-    private final JTable mainTable = new JTable(defaultTableModel);
     public TabbedPanel(){
-        this.setLayout(new BoxLayout(this,BoxLayout.Y_AXIS));
-        Stream.of(this.columnNames).forEach(e->this.defaultTableModel.addColumn(e));
-        this.mainTable.setSize(new Dimension(800,500));
-        this.add(new JScrollPane(this.mainTable));
-        this.defaultTableModel.insertRow(0,new Object[]{""});
+        this.setLayout(new BoxLayout(this,BoxLayout.PAGE_AXIS));
+        this.add(this.tableBlock.getMainTable());
+        this.add(this.buttonBlock.getButtonPanel());
+        this.add(this.scriptBlock.getjScrollBar());
     }
 
 

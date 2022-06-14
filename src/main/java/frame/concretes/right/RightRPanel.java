@@ -1,4 +1,4 @@
-package frame.concretes;
+package frame.concretes.right;
 
 import component.Loadable;
 import component.button.SideButton;
@@ -9,7 +9,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Stream;
 
 public class RightRPanel extends SidePanel implements Initializer, Loadable {
 

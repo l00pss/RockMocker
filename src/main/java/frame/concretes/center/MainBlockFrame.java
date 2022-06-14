@@ -1,8 +1,9 @@
-package frame.concretes;
+package frame.concretes.center;
 
 import component.Loadable;
 import component.factory.abstracts.AbstractLayoutFactory;
 import component.factory.abstracts.FactoryManager;
+import frame.concretes.center.frame.TabbedFrame;
 import utility.ImageProvider;
 import utility.Initializer;
 

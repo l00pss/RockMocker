@@ -4,7 +4,9 @@ import com.formdev.flatlaf.FlatLaf;
 import component.factory.abstracts.AbstractLayoutFactory;
 import component.factory.abstracts.FactoryManager;
 import frame.abstracts.AbstractRFrame;
+import frame.concretes.center.MainBlockFrame;
 import frame.concretes.leftPanel.LeftRPanel;
+import frame.concretes.right.RightRPanel;
 import utility.view.ViewChanger;
 
 import javax.imageio.ImageIO;
