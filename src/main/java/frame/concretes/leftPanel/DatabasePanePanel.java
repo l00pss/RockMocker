@@ -1,6 +1,10 @@
 package frame.concretes.leftPanel;
 
-import javax.swing.*;
+import component.panel.ComponentPanel;
 
-public class DatabasePanePanel extends JPanel {
+import javax.swing.*;
+import java.awt.*;
+
+public class DatabasePanePanel extends ComponentPanel {
+
 }
