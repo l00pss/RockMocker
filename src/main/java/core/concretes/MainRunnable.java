@@ -4,6 +4,7 @@ import com.formdev.flatlaf.FlatDarculaLaf;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
 import com.formdev.flatlaf.intellijthemes.FlatCarbonIJTheme;
+import com.formdev.flatlaf.util.SystemInfo;
 import core.abstracts.MockerApplication;
 import frame.concretes.MainRFrame;
 import frame.concretes.SplashFrame;
@@ -31,10 +32,10 @@ public class MainRunnable implements MockerApplication {
 
     static {
         try {
-            UIManager.setLookAndFeel(new FlatDarculaLaf());
-        } catch (UnsupportedLookAndFeelException e) {
-            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application Icon exception");
-        }
+                UIManager.setLookAndFeel(new FlatDarculaLaf());
+            } catch (UnsupportedLookAndFeelException e) {
+                JOptionPane.showMessageDialog(new JFrame("Error")," Win Init Application Icon exception");
+            }
     }
 
     private final Callable<Boolean> mainCallable = ()->{

@@ -50,7 +50,7 @@ public class NavigatorPanel extends JPanel implements Initializer, Loadable {
         Image iconGenerate = ImageIO.read(new File("src/main/java/component/icon/compile_dark.png"));
         Image iconRefactor = ImageIO.read(new File("src/main/java/component/icon/forceRefresh_dark.png"));
         Image iconExecute = ImageIO.read(new File("src/main/java/component/icon/execute_dark.png"));
-        Image iconCloseTab = ImageIO.read(new File("src/main/java/component/icon/cancel_dark.png"));
+        Image addRow = ImageIO.read(new File("src/main/java/component/icon/add_dark.png"));
 
         JButton executeButton = componentFactory.factoryButton("Execute");
         executeButton.setIcon(new ImageIcon(iconExecute));
@@ -82,7 +82,13 @@ public class NavigatorPanel extends JPanel implements Initializer, Loadable {
 
         });
 
-        Stream.of(executeButton,generateButton,refactorButton,refactorButton,preferenceButton)
+        JButton addRowButton = componentFactory.factoryButton("Add Row");
+        addRowButton.setIcon(new ImageIcon(addRow));
+        addRowButton.addActionListener((e)->{
+
+        });
+
+        Stream.of(executeButton,generateButton,refactorButton,refactorButton,preferenceButton,addRowButton)
                 .forEach(this::add);
     }
 

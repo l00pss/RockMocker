@@ -15,11 +15,6 @@ import java.awt.*;
 public class ViewProvider implements Initializer {
     @Override
     public void init() {
-//        try {
-//            UIManager.setLookAndFeel(new FlatLightLaf());
-//        } catch (UnsupportedLookAndFeelException e) {
-//            JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application Icon exception");
-//        }
 
         UIManager.put( "Button.arc", 0 );
         UIManager.put( "Component.arc", 0 );
@@ -46,8 +41,21 @@ public class ViewProvider implements Initializer {
 
         UIManager.put( "TabbedPane.selectedBackground", Color.DARK_GRAY );
 
-        if (SystemInfo.isMacOS && System.getProperty("apple.laf.useScreenMenuBar") == null)
-          System.setProperty("apple.laf.useScreenMenuBar", "true");
+
+//        if (SystemInfo.isMacOS && System.getProperty("apple.laf.useScreenMenuBar") == null){
+//            System.setProperty("apple.laf.useScreenMenuBar", "true");
+//            try {
+//                UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+//            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
+//                JOptionPane.showMessageDialog(new JFrame("Error"),"Init Application Icon exception");
+//            }
+//        }else {
+//            try {
+//                UIManager.setLookAndFeel(new FlatDarculaLaf());
+//            } catch (UnsupportedLookAndFeelException e) {
+//                JOptionPane.showMessageDialog(new JFrame("Error")," Win Init Application Icon exception");
+//            }
+//        }
 
         JDialog.setDefaultLookAndFeelDecorated(true);
         JFrame.setDefaultLookAndFeelDecorated(true);

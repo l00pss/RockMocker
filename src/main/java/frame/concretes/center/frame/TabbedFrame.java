@@ -13,6 +13,7 @@ public class TabbedFrame extends JPanel implements Initializer, Loadable {
     private Integer index;
     private TabbedPanel tabbedPanel = new TabbedPanel();
 
+    private final NavigatorPanel navigatorPanel = new NavigatorPanel();
 
     public TabbedFrame(){
         this.setLayout(new BorderLayout());
@@ -27,7 +28,7 @@ public class TabbedFrame extends JPanel implements Initializer, Loadable {
 
     private String nameOfTab = "New Tab ";
 
-    private final NavigatorPanel navigatorPanel = new NavigatorPanel();
+
 
     @Override
     public void postConstr() {

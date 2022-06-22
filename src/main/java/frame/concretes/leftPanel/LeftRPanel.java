@@ -13,7 +13,7 @@ import java.util.List;
 
 public class LeftRPanel extends SidePanel implements Initializer, Loadable {
 
-    private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.LEFT);
+    private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.LEFT,JTabbedPane.TOP);
 
     {
         this.setBorder(BorderFactory.createLineBorder(Color.gray));
@@ -23,7 +23,6 @@ public class LeftRPanel extends SidePanel implements Initializer, Loadable {
         this.tabbedPane.addTab("Database",new ImageIcon("src/main/java/component/icon/dbms.png"),new DatabasePanePanel());
         this.tabbedPane.addTab("Schema",new ImageIcon("src/main/java/component/icon/schema.png"),new SchemaPanePanel());
         this.tabbedPane.addTab("Tables",new ImageIcon("src/main/java/component/icon/partitionForeignTable_dark.png"),new TablePanePanel());
-
     }
 
     @Override
