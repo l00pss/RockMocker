@@ -1,6 +1,6 @@
 package component;
 
-public interface Stateful {
-    default void initState(){};
-    default void setState(){};
+public interface Stateful<T> {
+    void initState();
+    void setState(T stateAsEntity);
 }

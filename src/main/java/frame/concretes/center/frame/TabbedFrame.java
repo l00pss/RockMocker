@@ -3,13 +3,12 @@ package frame.concretes.center.frame;
 import component.Loadable;
 import component.Stateful;
 import component.panel.NavigatorPanel;
-import component.panel.TabbedPanel;
 import utility.Initializer;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class TabbedFrame extends JPanel implements Initializer, Loadable, Stateful {
+public class TabbedFrame extends JPanel implements Initializer, Loadable {
 
     private Integer index;
     private TabbedPanel tabbedPanel = new TabbedPanel();
@@ -52,4 +51,6 @@ public class TabbedFrame extends JPanel implements Initializer, Loadable, Statef
     public void setNameOfTab(String nameOfTab) {
         this.nameOfTab = nameOfTab;
     }
+
+
 }

@@ -7,6 +7,8 @@ import java.awt.*;
 import java.util.stream.Stream;
 
 public class TableBlock {
+
+
     private final String[] columnNames = { "ID", "Column Name", "Unique", "Nullable", "Updatable","Insertable","Type","Regex"};
     private  DefaultTableModel defaultTableModel = new DefaultTableModel();
     private final JTable mainTable = new JTable(defaultTableModel);
