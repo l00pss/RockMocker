@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="mac-ui">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/main/java/utility/lib/mac-ui.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
