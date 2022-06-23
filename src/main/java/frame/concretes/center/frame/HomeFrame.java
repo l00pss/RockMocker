@@ -1,27 +1,29 @@
 package frame.concretes.center.frame;
 
 import component.Loadable;
-import component.Stateful;
 import component.panel.NavigatorPanel;
+import utility.ImageProvider;
 import utility.Initializer;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class TabbedFrame extends JPanel implements Initializer, Loadable {
+public class HomeFrame extends JPanel implements Initializer, Loadable {
 
+    static Image iconImage = ImageProvider.getImage("src/main/java/component/icon/cancel_dark.png");
     private Integer index;
-    private TabbedPanel tabbedPanel = new TabbedPanel();
+    private final TabbedPanel tabbedPanel = new TabbedPanel();
 
     private final NavigatorPanel navigatorPanel = new NavigatorPanel();
 
-    public TabbedFrame(){
+
+    public HomeFrame(){
         this.setLayout(new BorderLayout());
         this.add(navigatorPanel,BorderLayout.NORTH);
         this.add(this.tabbedPanel,BorderLayout.CENTER);
     }
 
-    public TabbedFrame(Integer index){
+    public HomeFrame(Integer index){
         this();
         this.index= index;
     }

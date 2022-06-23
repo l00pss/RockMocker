@@ -3,7 +3,7 @@ package frame.concretes.center;
 import component.Loadable;
 import component.factory.abstracts.AbstractLayoutFactory;
 import component.factory.abstracts.FactoryManager;
-import frame.concretes.center.frame.TabbedFrame;
+import frame.concretes.center.frame.TabbedFramePanel;
 import utility.ImageProvider;
 import utility.Initializer;
 
@@ -13,16 +13,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainBlockFrame extends JPanel implements Initializer, Loadable {
-    private final List<TabbedFrame> tabbedFrames = new ArrayList<>();
+    private final List<TabbedFramePanel> tabbedFrames = new ArrayList<>();
     public final AbstractLayoutFactory layerFactory = (AbstractLayoutFactory) FactoryManager.LAYOUT.get();
-
+    static Image iconCancelImage = ImageProvider.getImage("src/main/java/component/icon/cancel_dark.png");
     private final JTabbedPane jTabbedPane = new JTabbedPane();
 
     {
-        tabbedFrames.add(new TabbedFrame(1));
-        tabbedFrames.add(new TabbedFrame(2));
-        tabbedFrames.add(new TabbedFrame(3));
-        tabbedFrames.add(new TabbedFrame(4));
+        tabbedFrames.add(new TabbedFramePanel());
+        tabbedFrames.add(new TabbedFramePanel());
         this.setLayout(layerFactory.factoryBorderLayout());
     }
 
@@ -48,9 +46,8 @@ public class MainBlockFrame extends JPanel implements Initializer, Loadable {
     }
 
     private void initTabbedPanes(){
-        Image image = ImageProvider.getImage("src/main/java/component/icon/cancel_dark.png");
-        for (TabbedFrame tabbed: tabbedFrames) {
-            this.jTabbedPane.addTab(tabbed.getNameOfTab(), new ImageIcon(image),tabbed);
+        for (TabbedFramePanel tabbed: tabbedFrames) {
+            this.jTabbedPane.addTab("New Tab", new ImageIcon(MainBlockFrame.iconCancelImage),tabbed);
             tabbed.init();
         }
         this.jTabbedPane.setTabComponentAt(this.jTabbedPane.getTabCount()-1,new JButton(new ImageIcon("src/main/java/component/icon/add_dark.png")));

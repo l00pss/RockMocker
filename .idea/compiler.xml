@@ -12,7 +12,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="RockMocker" options="--add-exports java.desktop/com.apple.laf=ALL-UNNAMED" />
+      <module name="RockMocker" options="" />
     </option>
   </component>
 </project>
