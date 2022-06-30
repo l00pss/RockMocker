@@ -1,6 +1,7 @@
 package frame.concretes.leftPanel;
 
 import component.Loadable;
+import component.PanelRenderer;
 import component.button.TransparantListButton;
 import component.panel.ComponentPanel;
 import utility.Initializer;
@@ -10,17 +11,24 @@ import java.awt.*;
 import java.util.stream.Stream;
 
 public class DatabasePanePanel extends ComponentPanel implements Initializer, Loadable {
-    private final DefaultListModel<Button> defaultListModel = new DefaultListModel<>();
-    private JList<Button> list = new JList<>(defaultListModel);
+    private final DefaultListModel<JButton> defaultListModel = new DefaultListModel<>();
+
+    private final JButton oracleButton = new TransparantListButton("Oracle");
+    private final JButton postgresButton = new TransparantListButton("PostgresSql");
+    private final JButton mySqlButton = new TransparantListButton("MySQL");
+    private final JList<JButton> list ;
     private final JScrollPane scrollPane ;
     Box box = Box.createVerticalBox();
     public DatabasePanePanel(){
         super();
-        this.defaultListModel.addElement(new Button("Oracle"));
-        this.defaultListModel.addElement(new Button("PostgreSQL"));
-        this.defaultListModel.addElement(new Button("MySQL"));
+        this.defaultListModel.addElement(this.oracleButton);
+        this.defaultListModel.addElement(this.postgresButton);
+        this.defaultListModel.addElement(this.mySqlButton);
+        this.list = new JList<>(defaultListModel);
+        this.list.setCellRenderer(new PanelRenderer());
         this.list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         scrollPane = new JScrollPane(list);
+        final JScrollBar scrollBar = scrollPane.getVerticalScrollBar();
     }
 
 
