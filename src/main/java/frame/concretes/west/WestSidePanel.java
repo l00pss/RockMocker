@@ -1,13 +1,13 @@
-package frame.concretes.leftPanel;
+package frame.concretes.west;
 
 import component.Loadable;
 import component.panel.SidePanel;
-import utility.Initializer;
+import component.Initializer;
 
 import javax.swing.*;
 import java.awt.*;
 
-public class LeftRPanel extends SidePanel implements Initializer, Loadable {
+public class WestSidePanel extends SidePanel implements Initializer, Loadable {
 
     private final JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.LEFT,JTabbedPane.WRAP_TAB_LAYOUT);
 

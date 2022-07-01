@@ -6,13 +6,13 @@ import component.Initializer;
 import javax.swing.*;
 import java.awt.*;
 
-public abstract class GFrame extends JFrame implements Initializer, Loadable {
+public abstract class SideFrame extends JFrame implements Initializer, Loadable {
 
-    public GFrame(String frameName){
+    public SideFrame(String frameName){
         this.setName(frameName);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-        this.setMinimumSize(new Dimension(1400,1000));
+        this.setMinimumSize(new Dimension(600,400));
     }
 
 }

@@ -1,21 +1,17 @@
 package frame.abstracts;
 
 import component.frame.GFrame;
-import component.other.GMenuBar;
-import component.panel.NavigatorPanel;
-
-import javax.swing.*;
-import java.awt.*;
+import frame.concretes.MenuBar;
 
 public abstract class AbstractRFrame extends GFrame {
     public AbstractRFrame(String frameName) {
         super(frameName);
     }
-    private final GMenuBar gMenuBar = new GMenuBar();
+    private final MenuBar menuBar = new MenuBar();
     @Override
     public void init() {
-        this.gMenuBar.init();
-        this.setJMenuBar(gMenuBar);
+        this.menuBar.init();
+        this.setJMenuBar(menuBar);
         this.postConstr();
         this.preDestroy();
         this.setVisible(true);

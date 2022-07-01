@@ -2,7 +2,7 @@ package model;
 
 
 import business.abstracts.Stateful;
-import utility.Initializer;
+import component.Initializer;
 
 import java.util.Objects;
 

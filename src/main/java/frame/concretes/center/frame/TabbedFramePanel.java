@@ -1,7 +1,7 @@
 package frame.concretes.center.frame;
 
 import component.Loadable;
-import utility.Initializer;
+import component.Initializer;
 
 import javax.swing.*;
 import java.awt.*;

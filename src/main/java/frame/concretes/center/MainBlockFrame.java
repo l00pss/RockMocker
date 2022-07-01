@@ -5,7 +5,7 @@ import component.factory.abstracts.AbstractLayoutFactory;
 import component.factory.abstracts.FactoryManager;
 import frame.concretes.center.frame.TabbedFramePanel;
 import utility.ImageProvider;
-import utility.Initializer;
+import component.Initializer;
 
 import javax.swing.*;
 import java.awt.*;

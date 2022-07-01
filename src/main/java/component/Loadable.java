@@ -3,7 +3,7 @@ package component;
 import java.io.IOException;
 
 public interface Loadable {
-    void postConstr();
+    default void postConstr(){};
 
-    void preDestroy();
+    default void preDestroy(){};
 }

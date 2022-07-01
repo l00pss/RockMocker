@@ -5,8 +5,8 @@ import component.factory.abstracts.AbstractLayoutFactory;
 import component.factory.abstracts.FactoryManager;
 import frame.abstracts.AbstractRFrame;
 import frame.concretes.center.MainBlockFrame;
-import frame.concretes.leftPanel.LeftRPanel;
-import frame.concretes.right.RightRPanel;
+import frame.concretes.west.WestSidePanel;
+import frame.concretes.east.EastSidePanel;
 import utility.view.ViewChanger;
 
 import javax.imageio.ImageIO;
@@ -21,17 +21,17 @@ public class MainRFrame extends AbstractRFrame  {
 
 
 
-    private final RightRPanel rightRPanel = new RightRPanel();
+    private final EastSidePanel eastSidePanel = new EastSidePanel();
     private final MainBlockFrame mainBlockFrame = new MainBlockFrame();
-    private final LeftRPanel leftRPanel = new LeftRPanel();
+    private final WestSidePanel westSidePanel = new WestSidePanel();
 
     public MainRFrame(String frameName) {
         super(frameName);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH);
         this.setLayout(new BorderLayout());
-        this.add(leftRPanel,BorderLayout.WEST);
+        this.add(westSidePanel,BorderLayout.WEST);
         this.add(mainBlockFrame,BorderLayout.CENTER);
-        this.add(rightRPanel,BorderLayout.EAST);
+        this.add(eastSidePanel,BorderLayout.EAST);
     }
 
 
@@ -57,8 +57,8 @@ public class MainRFrame extends AbstractRFrame  {
 
 
     private void initSidePanel(){
-        this.leftRPanel.init();
-        this.rightRPanel.init();
+        this.westSidePanel.init();
+        this.eastSidePanel.init();
     }
 
 }

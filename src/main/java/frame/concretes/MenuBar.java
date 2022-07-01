@@ -1,17 +1,15 @@
-package component.other;
+package frame.concretes;
 
 import component.Loadable;
 import component.factory.abstracts.AbstractMenuBarFactory;
 import component.factory.concretes.MenuBarFactory;
-import utility.Initializer;
+import component.Initializer;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.util.function.Consumer;
 import java.util.stream.Stream;
 
-public class GMenuBar extends JMenuBar implements Initializer, Loadable {
+public class MenuBar extends JMenuBar implements Initializer, Loadable {
 
     private final AbstractMenuBarFactory menuBarFactory;
     {

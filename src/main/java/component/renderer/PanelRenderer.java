@@ -1,4 +1,4 @@
-package component;
+package component.renderer;
 
 import javax.swing.*;
 import java.awt.*;

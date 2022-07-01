@@ -1,16 +1,16 @@
-package frame.concretes.right;
+package frame.concretes.east;
 
 import component.Loadable;
 import component.button.SideGButton;
 import component.panel.SidePanel;
-import utility.Initializer;
+import component.Initializer;
 
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RightRPanel extends SidePanel implements Initializer, Loadable {
+public class EastSidePanel extends SidePanel implements Initializer, Loadable {
 
     static List<SideGButton> SIDE_BUTTONS = new ArrayList<>();
     static SideGButton databaseSideGButton = new SideGButton("INSERT POLICY");
@@ -22,9 +22,9 @@ public class RightRPanel extends SidePanel implements Initializer, Loadable {
     private final Box horizontalBox  = Box.createHorizontalBox();
 
     static {
-        RightRPanel.SIDE_BUTTONS.add(databaseSideGButton);
-        RightRPanel.SIDE_BUTTONS.add(framesSideGButton);
-        RightRPanel.SIDE_BUTTONS.add(schemesSideGButton);
+        EastSidePanel.SIDE_BUTTONS.add(databaseSideGButton);
+        EastSidePanel.SIDE_BUTTONS.add(framesSideGButton);
+        EastSidePanel.SIDE_BUTTONS.add(schemesSideGButton);
 
     }
 
@@ -44,7 +44,7 @@ public class RightRPanel extends SidePanel implements Initializer, Loadable {
 
     @Override
     public void init() {
-        for (SideGButton sideGButton : RightRPanel.SIDE_BUTTONS){
+        for (SideGButton sideGButton : EastSidePanel.SIDE_BUTTONS){
             this.horizontalBox.add(sideGButton);
         }
         this.add(this.horizontalBox);

@@ -1,16 +1,12 @@
 package core.concretes;
 
 import com.formdev.flatlaf.FlatDarculaLaf;
-import com.formdev.flatlaf.FlatLightLaf;
-import com.formdev.flatlaf.intellijthemes.FlatArcDarkOrangeIJTheme;
-import com.formdev.flatlaf.intellijthemes.FlatCarbonIJTheme;
-import com.formdev.flatlaf.util.SystemInfo;
 import core.abstracts.MockerApplication;
 import frame.concretes.MainRFrame;
 import frame.concretes.SplashFrame;
 import frame.factory.abstracts.AbstractFrameFactory;
 import frame.factory.concretes.FrameFactory;
-import utility.Initializer;
+import component.Initializer;
 import utility.view.ViewProvider;
 
 import javax.swing.*;

@@ -1,10 +1,10 @@
-package frame.concretes.leftPanel;
+package frame.concretes.west;
 
 import component.Loadable;
-import component.PanelRenderer;
+import component.renderer.PanelRenderer;
 import component.button.GlueListButton;
 import component.panel.ComponentPanel;
-import utility.Initializer;
+import component.Initializer;
 
 import javax.swing.*;
 import java.awt.*;

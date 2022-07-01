@@ -3,7 +3,7 @@ package component.panel;
 import component.Loadable;
 import component.factory.abstracts.AbstractComponentFactory;
 import component.factory.abstracts.FactoryManager;
-import utility.Initializer;
+import component.Initializer;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

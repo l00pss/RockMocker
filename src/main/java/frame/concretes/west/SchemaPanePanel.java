@@ -1,8 +1,6 @@
-package frame.concretes.leftPanel;
+package frame.concretes.west;
 
 import component.panel.ComponentPanel;
-
-import javax.swing.*;
 
 public class SchemaPanePanel extends ComponentPanel {
 }
