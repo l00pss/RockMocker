@@ -1,4 +1,4 @@
-package component;
+package business.abstracts;
 
 public interface Stateful<T> {
     void initState();

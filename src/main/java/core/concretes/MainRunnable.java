@@ -39,16 +39,17 @@ public class MainRunnable implements MockerApplication {
     }
 
     private final Callable<Boolean> mainCallable = ()->{
-        Thread.sleep(300);
+       // Thread.sleep(3000);
         Stream.of(viewInitializer,mainRFrame)
                 .forEach(Initializer::init);
         return true;
     };
-
-    private final Runnable runnableSplash = this.splashFrame::init;
     {
         callables.add(mainCallable);
     }
+
+    private final Runnable runnableSplash = this.splashFrame::init;
+
 
 
     @Override

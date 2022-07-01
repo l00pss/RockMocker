@@ -1,12 +1,10 @@
 package component.button;
 
-import javax.swing.*;
 import java.awt.*;
-import java.awt.geom.Rectangle2D;
 
-public  class SideButton extends GButton{
+public  class SideGButton extends GButton{
 
-    public SideButton(String buttonName){
+    public SideGButton(String buttonName){
         super(buttonName);
     }
 

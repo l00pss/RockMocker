@@ -1,15 +1,11 @@
 package frame.concretes.leftPanel;
 
 import component.Loadable;
-import component.button.SideButton;
 import component.panel.SidePanel;
 import utility.Initializer;
 
 import javax.swing.*;
-import javax.swing.plaf.LabelUI;
 import java.awt.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class LeftRPanel extends SidePanel implements Initializer, Loadable {
 

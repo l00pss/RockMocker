@@ -1,7 +1,7 @@
 package frame.concretes.right;
 
 import component.Loadable;
-import component.button.SideButton;
+import component.button.SideGButton;
 import component.panel.SidePanel;
 import utility.Initializer;
 
@@ -12,19 +12,19 @@ import java.util.List;
 
 public class RightRPanel extends SidePanel implements Initializer, Loadable {
 
-    static List<SideButton> SIDE_BUTTONS = new ArrayList<>();
-    static SideButton databaseSideButton = new SideButton("INSERT POLICY");
-    static SideButton framesSideButton = new SideButton("STRATEGY");
-    static SideButton schemesSideButton = new SideButton("HISTORY");
+    static List<SideGButton> SIDE_BUTTONS = new ArrayList<>();
+    static SideGButton databaseSideGButton = new SideGButton("INSERT POLICY");
+    static SideGButton framesSideGButton = new SideGButton("STRATEGY");
+    static SideGButton schemesSideGButton = new SideGButton("HISTORY");
 
     private final JPanel freePanel = new JPanel();
 
     private final Box horizontalBox  = Box.createHorizontalBox();
 
     static {
-        RightRPanel.SIDE_BUTTONS.add(databaseSideButton);
-        RightRPanel.SIDE_BUTTONS.add(framesSideButton);
-        RightRPanel.SIDE_BUTTONS.add(schemesSideButton);
+        RightRPanel.SIDE_BUTTONS.add(databaseSideGButton);
+        RightRPanel.SIDE_BUTTONS.add(framesSideGButton);
+        RightRPanel.SIDE_BUTTONS.add(schemesSideGButton);
 
     }
 
@@ -44,8 +44,8 @@ public class RightRPanel extends SidePanel implements Initializer, Loadable {
 
     @Override
     public void init() {
-        for (SideButton sideButton: RightRPanel.SIDE_BUTTONS){
-            this.horizontalBox.add(sideButton);
+        for (SideGButton sideGButton : RightRPanel.SIDE_BUTTONS){
+            this.horizontalBox.add(sideGButton);
         }
         this.add(this.horizontalBox);
         this.add(this.freePanel);

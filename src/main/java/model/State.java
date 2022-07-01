@@ -1,7 +1,7 @@
 package model;
 
 
-import component.Stateful;
+import business.abstracts.Stateful;
 import utility.Initializer;
 
 import java.util.Objects;
@@ -9,7 +9,7 @@ import java.util.Objects;
 public class State<T> implements Stateful<T> {
 
     private T stateAsEntity;
-    private Initializer initializer;
+    private final Initializer initializer;
 
     public State(Initializer initializer,T stateAsEntity){
         this.initializer = initializer;
@@ -22,10 +22,8 @@ public class State<T> implements Stateful<T> {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
-    public void setState(Object stateAsEntity ) {
+    public void setState(T stateOfEntity ) {
         if (Objects.nonNull(stateAsEntity))
-            this.stateAsEntity = (T) stateAsEntity;
-        initState();
+            this.initState();
     }
 }

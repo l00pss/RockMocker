@@ -2,20 +2,19 @@ package frame.concretes.leftPanel;
 
 import component.Loadable;
 import component.PanelRenderer;
-import component.button.TransparantListButton;
+import component.button.GlueListButton;
 import component.panel.ComponentPanel;
 import utility.Initializer;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.stream.Stream;
 
 public class DatabasePanePanel extends ComponentPanel implements Initializer, Loadable {
     private final DefaultListModel<JButton> defaultListModel = new DefaultListModel<>();
 
-    private final JButton oracleButton = new TransparantListButton("Oracle");
-    private final JButton postgresButton = new TransparantListButton("PostgresSql");
-    private final JButton mySqlButton = new TransparantListButton("MySQL");
+    private final JButton oracleButton = new GlueListButton("Oracle");
+    private final JButton postgresButton = new GlueListButton("PostgresSql");
+    private final JButton mySqlButton = new GlueListButton("MySQL");
     private final JList<JButton> list ;
     private final JScrollPane scrollPane ;
     Box box = Box.createVerticalBox();
