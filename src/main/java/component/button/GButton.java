@@ -10,4 +10,7 @@ public abstract class GButton extends JButton {
     public GButton(String name){
         super(name);
     }
+
+    public GButton(Action action){super(action);}
+
 }
