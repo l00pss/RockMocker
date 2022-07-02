@@ -10,6 +10,7 @@ public  class Column {
     private ColumnType columnType;
     private String regex;
 
+
     public boolean isID() {
         return isID;
     }

@@ -12,4 +12,6 @@ public abstract class GWindow extends JWindow implements Initializer, Loadable {
         this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(Color.DARK_GRAY);
     }
+
+
 }

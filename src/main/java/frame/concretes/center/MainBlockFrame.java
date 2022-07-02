@@ -3,7 +3,7 @@ package frame.concretes.center;
 import component.Loadable;
 import component.factory.abstracts.AbstractLayoutFactory;
 import component.factory.abstracts.FactoryManager;
-import frame.concretes.center.frame.TabbedFramePanel;
+import frame.concretes.center.frame.home.TabbedFramePanel;
 import utility.ImageProvider;
 import component.Initializer;
 

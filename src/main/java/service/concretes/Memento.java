@@ -45,4 +45,10 @@ public class Memento<T> implements AbstractMemento<T>  {
             this.cache.clear();
         this.memento.add(obj);
     }
+
+    public void preDestroy() {
+
+    }
+
+
 }

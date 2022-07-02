@@ -1,7 +1,6 @@
-package frame.concretes.center.frame;
+package frame.concretes.center.frame.home;
 
 import component.Loadable;
-import component.panel.NavigatorPanel;
 import utility.ImageProvider;
 import component.Initializer;
 

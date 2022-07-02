@@ -1,4 +1,4 @@
-package frame.concretes.center.frame;
+package frame.concretes.center.frame.home;
 
 import javax.swing.*;
 

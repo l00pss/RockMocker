@@ -5,4 +5,5 @@ public interface AbstractMemento<T> {
     T redo();
 
     void push(T obj);
+
 }

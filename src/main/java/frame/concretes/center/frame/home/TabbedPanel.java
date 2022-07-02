@@ -1,4 +1,4 @@
-package frame.concretes.center.frame;
+package frame.concretes.center.frame.home;
 
 import component.Loadable;
 import component.Initializer;
@@ -6,7 +6,6 @@ import component.Initializer;
 import javax.swing.*;
 
 public class TabbedPanel extends JPanel implements Initializer, Loadable {
-
 
 
     private  JSplitPane topSplitPane;

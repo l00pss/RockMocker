@@ -1,4 +1,4 @@
-package component.panel;
+package frame.concretes.center.frame.home;
 
 import component.Loadable;
 import component.factory.abstracts.AbstractComponentFactory;
@@ -85,7 +85,7 @@ public class NavigatorPanel extends JPanel implements Initializer, Loadable {
         JButton addRowButton = componentFactory.factoryButton("Add Row");
         addRowButton.setIcon(new ImageIcon(addRow));
         addRowButton.addActionListener((e)->{
-
+            new InsertColumnFrame("Add Column").setVisible(true);
         });
 
         Stream.of(executeButton,generateButton,refactorButton,refactorButton,preferenceButton,addRowButton)
