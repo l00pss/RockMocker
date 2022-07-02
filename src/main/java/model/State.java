@@ -1,7 +1,7 @@
 package model;
 
 
-import business.abstracts.Stateful;
+import service.abstracts.Stateful;
 import component.Initializer;
 
 import java.util.Objects;
