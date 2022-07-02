@@ -1,8 +1,6 @@
 package component.frame;
 
-import frame.Screen;
-
-import javax.swing.*;
+import screens.Screen;
 
 public class MiddleFrame extends ClipFrame {
     public MiddleFrame(String name){

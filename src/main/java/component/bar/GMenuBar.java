@@ -1,7 +1,7 @@
 package component.bar;
 
-import component.Initializer;
-import component.Loadable;
+import trigger.abstracts.Initializer;
+import trigger.abstracts.Loadable;
 
 import javax.swing.*;
 
