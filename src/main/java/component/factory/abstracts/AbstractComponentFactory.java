@@ -6,6 +6,8 @@ public interface AbstractComponentFactory {
 
     JButton factoryButton(String nameOfButton);
 
+    JButton factoryButton();
+
     JLabel factoryLabel(String labelText);
 
     JList<?> factoryList();

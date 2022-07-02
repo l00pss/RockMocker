@@ -1,6 +1,14 @@
 package component.window;
 
+import javax.swing.*;
+
 public class InstallWindow extends GWindow{
+
+    public InstallWindow(JFrame jFrame){
+        super(jFrame);
+        super.setMainFrame(jFrame);
+    }
+
     @Override
     public void postConstr() {
 
@@ -8,11 +16,6 @@ public class InstallWindow extends GWindow{
 
     @Override
     public void preDestroy() {
-
-    }
-
-    @Override
-    public void init() {
 
     }
 }

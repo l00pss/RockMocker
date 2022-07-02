@@ -1,7 +1,10 @@
-package frame.concretes.center.frame;
+package frame.concretes.center.frame.home;
 
 import component.Loadable;
 import component.Initializer;
+import frame.concretes.center.frame.ResourceFrame;
+import frame.concretes.center.frame.ViewFrame;
+import frame.concretes.center.frame.home.HomeFrame;
 
 import javax.swing.*;
 import java.awt.*;
