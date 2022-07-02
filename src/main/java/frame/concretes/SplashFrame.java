@@ -29,7 +29,6 @@ public class SplashFrame extends AbstractRWindow {
     @Override
     public void postConstr() {
         this.mainPanel.setLayout(new BorderLayout());
-
         this.mainPanel.add(this.getContextPanel(),BorderLayout.NORTH);
         this.mainPanel.add(this.getLogoPanel(),BorderLayout.SOUTH);
         this.add(this.mainPanel,BorderLayout.CENTER);
@@ -52,11 +51,12 @@ public class SplashFrame extends AbstractRWindow {
         JSeparator separator = new JSeparator(SwingConstants.HORIZONTAL);
 
         jProgressBar = new JProgressBar(0,100);
-        jProgressBar.setPreferredSize(new Dimension(530,5));
+        jProgressBar.setPreferredSize(new Dimension(530,3));
         jProgressBar.setValue(0);
         jProgressBar.setStringPainted(false);
         jProgressBar.setBackground(Color.white);
-        jProgressBar.setForeground(Color.white);
+        jProgressBar.setForeground(Color.decode("#2980b9"));
+        //rgba(52, 152, 219,1.0)
 
         new Thread(progressRunnable).start();
 

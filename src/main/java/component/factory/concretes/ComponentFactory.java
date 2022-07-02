@@ -11,6 +11,11 @@ public class ComponentFactory implements AbstractComponentFactory {
     }
 
     @Override
+    public JButton factoryButton() {
+        return new JButton();
+    }
+
+    @Override
     public JLabel factoryLabel(String labelText) {
         return new JLabel(labelText);
     }

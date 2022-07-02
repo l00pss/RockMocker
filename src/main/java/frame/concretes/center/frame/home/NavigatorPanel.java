@@ -1,9 +1,13 @@
 package frame.concretes.center.frame.home;
 
 import component.Loadable;
+import component.context.ODWContext;
 import component.factory.abstracts.AbstractComponentFactory;
 import component.factory.abstracts.FactoryManager;
 import component.Initializer;
+import component.frame.ClipFrame;
+import component.window.GWindow;
+import component.frame.OptionalDialogWindow;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -44,13 +48,17 @@ public class NavigatorPanel extends JPanel implements Initializer, Loadable {
         FlowLayout flowLayoutx = new FlowLayout(FlowLayout.LEFT,5,5);
         this.setLayout(flowLayoutx);
 
-        Image preferenceIcon = ImageIO.read(new File("src/main/java/component/icon/edit.png"));
-        Image iconOpenP = ImageIO.read(new File("src/main/java/component/icon/install_dark.png"));
+        Image exportIcon = ImageIO.read(new File("src/main/java/component/icon/export_dark.png"));
         Image iconReload = ImageIO.read(new File("src/main/java/component/icon/buildLoadChanges_dark.png"));
         Image iconGenerate = ImageIO.read(new File("src/main/java/component/icon/compile_dark.png"));
         Image iconRefactor = ImageIO.read(new File("src/main/java/component/icon/forceRefresh_dark.png"));
         Image iconExecute = ImageIO.read(new File("src/main/java/component/icon/execute_dark.png"));
-        Image addRow = ImageIO.read(new File("src/main/java/component/icon/add_dark.png"));
+        Image addIcon = ImageIO.read(new File("src/main/java/component/icon/add_dark.png"));
+        Image editRow = ImageIO.read(new File("src/main/java/component/icon/edit_dark.png"));
+        Image undo = ImageIO.read(new File("src/main/java/component/icon/undo_dark.png"));
+        Image redo = ImageIO.read(new File("src/main/java/component/icon/redo_dark.png"));
+        Image delete = ImageIO.read(new File("src/main/java/component/icon/delete_dark.png"));
+
 
         JButton executeButton = componentFactory.factoryButton("Execute");
         executeButton.setIcon(new ImageIcon(iconExecute));
@@ -77,18 +85,49 @@ public class NavigatorPanel extends JPanel implements Initializer, Loadable {
         });
 
         JButton preferenceButton = componentFactory.factoryButton("Export");
-        preferenceButton.setIcon(new ImageIcon(preferenceIcon));
+        preferenceButton.setIcon(new ImageIcon(exportIcon));
         preferenceButton.addActionListener((e)->{
 
         });
 
-        JButton addRowButton = componentFactory.factoryButton("Add Row");
-        addRowButton.setIcon(new ImageIcon(addRow));
+        JButton addRowButton = componentFactory.factoryButton("Add Column");
+        addRowButton.setIcon(new ImageIcon(addIcon));
         addRowButton.addActionListener((e)->{
-            new InsertColumnFrame("Add Column").setVisible(true);
+            ClipFrame clipFrame  = new InsertColumnFrame("Add Column");
+            clipFrame.setVisible(true);
+            clipFrame.init();
         });
 
-        Stream.of(executeButton,generateButton,refactorButton,refactorButton,preferenceButton,addRowButton)
+        JButton editRowButton = componentFactory.factoryButton("Edit Column");
+        editRowButton.setIcon(new ImageIcon(editRow));
+        editRowButton.addActionListener((e)->{
+            ClipFrame clipFrame  = new InsertColumnFrame("Edit Column");
+            clipFrame.setVisible(true);
+            clipFrame.init();
+        });
+
+        JButton undoButton = componentFactory.factoryButton();
+        undoButton.setIcon(new ImageIcon(undo));
+        undoButton.addActionListener((e)->{
+
+        });
+
+        JButton redoButton = componentFactory.factoryButton();
+        redoButton.setIcon(new ImageIcon(redo));
+        redoButton.addActionListener((e)->{
+
+        });
+
+        JButton deleteButton = componentFactory.factoryButton();
+        deleteButton.setIcon(new ImageIcon(delete));
+        deleteButton.addActionListener((e)->{
+            ODWContext odwContext = new ODWContext("Warning!","Are u want delete?",false,(a)->{},(a)->{});
+            ClipFrame clipFrame = new OptionalDialogWindow(odwContext);
+            clipFrame.init();
+        });
+
+        Stream.of(executeButton,generateButton,refactorButton,refactorButton,
+                        preferenceButton,addRowButton,editRowButton,undoButton,redoButton,deleteButton)
                 .forEach(this::add);
     }
 

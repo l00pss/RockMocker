@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class GTableModel extends AbstractTableModel {
     private static final String[] COLUMNS = { "ID", "Column Name", "Unique", "Nullable", "Updatable","Insertable","Type","Regex"};
-    private Object[][] data = new Object[][]{{"","","","","","","",""},{"","","","","","","",Boolean.TRUE}};
+    private Object[][] data = new Object[][]{{"","","","","","","",""}};
 
     public int getColumnCount() {
         return COLUMNS.length;
