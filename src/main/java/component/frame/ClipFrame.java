@@ -10,6 +10,10 @@ public class ClipFrame extends JFrame implements Initializer, Loadable {
         super(name);
     }
 
+    public ClipFrame(){
+        super();
+    }
+
     @Override
     public void init() {
         postConstr();

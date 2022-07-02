@@ -1,12 +1,13 @@
 package screens.concretes.center.frame.home;
 
+import component.frame.InformationFrame;
 import trigger.abstracts.Loadable;
 import component.context.DialogContext;
 import component.factory.abstracts.AbstractComponentFactory;
 import component.factory.abstracts.FactoryManager;
 import trigger.abstracts.Initializer;
 import component.frame.ClipFrame;
-import component.frame.OptionalDialogWindow;
+import component.frame.DialogFrame;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -114,14 +115,15 @@ public class NavigatorPanel extends JPanel implements Initializer, Loadable {
         JButton redoButton = componentFactory.factoryButton();
         redoButton.setIcon(new ImageIcon(redo));
         redoButton.addActionListener((e)->{
-
+            ClipFrame clipFrame = new InformationFrame("Successful!");
+            clipFrame.init();
         });
 
         JButton deleteButton = componentFactory.factoryButton();
         deleteButton.setIcon(new ImageIcon(delete));
         deleteButton.addActionListener((e)->{
             DialogContext dialogContext = new DialogContext("Warning!","Sure? Do you want delete?");
-            ClipFrame clipFrame = new OptionalDialogWindow(dialogContext);
+            ClipFrame clipFrame = new DialogFrame(dialogContext);
             clipFrame.init();
         });
 

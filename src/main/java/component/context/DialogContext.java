@@ -1,7 +1,9 @@
 package component.context;
 
+import component.frame.DialogFrame;
+
 /**
- * @see component.frame.OptionalDialogWindow
+ * @see DialogFrame
  * @param header
  * @param question
  * @param isRepeat

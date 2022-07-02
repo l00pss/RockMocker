@@ -8,7 +8,7 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 
-public class OptionalDialogWindow extends SmallFrame {
+public class DialogFrame extends SmallFrame {
     private final JPanel mainPanel = new JPanel();
     private final DialogContext dialogContext ;
 
@@ -30,7 +30,7 @@ public class OptionalDialogWindow extends SmallFrame {
     }
 
 
-    public OptionalDialogWindow(DialogContext dialogContext) {
+    public DialogFrame(DialogContext dialogContext) {
         super(dialogContext.header());
         this.dialogContext = dialogContext;
         this.mainPanel.setLayout(new BoxLayout(this.mainPanel,BoxLayout.Y_AXIS));
@@ -51,7 +51,7 @@ public class OptionalDialogWindow extends SmallFrame {
         this.topPanel.add(question);
 
         this.bottomPanel.add(this.yesButton);
-        this.bottomPanel.add(Box.createRigidArea(new Dimension(50,0)));
+        this.bottomPanel.add(Box.createRigidArea(new Dimension(40,0)));
         this.bottomPanel.add(this.noButton);
     }
 
