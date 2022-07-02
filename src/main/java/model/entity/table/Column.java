@@ -1,8 +1,8 @@
-package model.entity;
+package model.entity.table;
 
-public  class TableBlockState {
+public  class Column {
     private boolean isID;
-    private String name;
+    private String columnName;
     private boolean isUnique;
     private boolean isNullable;
     private boolean isUpdatable;
@@ -18,12 +18,12 @@ public  class TableBlockState {
         isID = ID;
     }
 
-    public String getName() {
-        return name;
+    public String getColumnName() {
+        return columnName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setColumnName(String columnName) {
+        this.columnName = columnName;
     }
 
     public boolean isUnique() {
