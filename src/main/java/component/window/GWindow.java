@@ -1,7 +1,7 @@
 package component.window;
 
-import component.Loadable;
-import component.Initializer;
+import trigger.abstracts.Loadable;
+import trigger.abstracts.Initializer;
 
 import javax.swing.*;
 import java.awt.*;

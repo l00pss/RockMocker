@@ -1,13 +1,17 @@
 package component.frame;
 
-import component.Initializer;
-import component.Loadable;
+import trigger.abstracts.Initializer;
+import trigger.abstracts.Loadable;
 
 import javax.swing.*;
 
 public class ClipFrame extends JFrame implements Initializer, Loadable {
     public ClipFrame(String name){
         super(name);
+    }
+
+    public ClipFrame(){
+        super();
     }
 
     @Override

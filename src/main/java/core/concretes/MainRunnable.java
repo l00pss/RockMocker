@@ -2,11 +2,11 @@ package core.concretes;
 
 import com.formdev.flatlaf.FlatDarculaLaf;
 import core.abstracts.MockerApplication;
-import frame.concretes.MainRFrame;
-import frame.concretes.SplashFrame;
-import frame.factory.abstracts.AbstractFrameFactory;
-import frame.factory.concretes.FrameFactory;
-import component.Initializer;
+import screens.concretes.MainRFrame;
+import screens.concretes.SplashFrame;
+import screens.factory.abstracts.AbstractFrameFactory;
+import screens.factory.concretes.FrameFactory;
+import trigger.abstracts.Initializer;
 import utility.view.ViewProvider;
 
 import javax.swing.*;

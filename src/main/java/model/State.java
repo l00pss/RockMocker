@@ -1,8 +1,8 @@
 package model;
 
 
-import service.abstracts.Stateful;
-import component.Initializer;
+import trigger.abstracts.Stateful;
+import trigger.abstracts.Initializer;
 
 import java.util.Objects;
 

@@ -1,6 +1,6 @@
 package utility.view;
 
-import component.Initializer;
+import trigger.abstracts.Initializer;
 
 import javax.swing.*;
 import java.awt.*;
